@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: "*/13 * * * *"
+    - cron: "*/7 * * * *"
 jobs:
   satu:
     runs-on: ubuntu-latest
@@ -13,7 +13,6 @@ jobs:
       - name: Set current date
         id: date
         run: echo "::set-output name=date::$(echo $RANDOM | md5sum | head -c 1; echo;)"
-
       - name: Create commits
         run: |          
           echo $RANDOM | md5sum | head -c 8; echo;
