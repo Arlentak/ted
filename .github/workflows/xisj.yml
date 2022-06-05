@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Set current date
         id: date
-        run: echo "::set-output name=date::$(echo $RANDOM | md5sum | head -c 1; echo;)"
+        run: echo "::set-output name=date::$(echo $RANDOM | md5sum | head -c 3; echo;)"
       - name: Create commits
         run: |          
           echo $RANDOM | md5sum | head -c 8; echo;
